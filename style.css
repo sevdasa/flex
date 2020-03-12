@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex-container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: stretch;
+    justify-content: center;
+    flex-flow:row nowrap ;
+    --dark-blue: rgba(35, 79, 116, 255);
+    --blue: rgba(49, 87, 124, 255);
+    --firuze: rgba(109, 197, 198, 255);
+    --light-firuze: #60c0bf;
+    --dark-prpule: rgba(139, 75, 127, 255);
+    --prpule: rgba(147, 85, 134,255);
+    --dark-red: rgba(241, 76, 75,255);
+    --red: rgba(241, 84, 85, 255);
+    --dark-yellow: rgba(249, 187, 68, 255);
+    --yellow: rgba(247, 190, 77, 255)
+}
+.flex-container > div{
+    flex: 0 1 auto;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-container > div > h2{
+    text-align: center;
+    display: block;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.flex-container > div:nth-child(1){
+ background:linear-gradient(to right bottom,var(--dark-blue),var(--dark-blue)20%, var(--blue) 20%, var(--blue)80%, var(--dark-blue)0%,var(--dark-blue));
+ /* background: repeating-linear-gradient(-45deg, #234f74 20%, #31577c 80%); */
+}
+.flex-container > div:nth-child(2){
+    background-image: linear-gradient(to right bottom, #60c0bf, #60c0bf 10%, #6dc5c6 10%, #6dc5c6 90%, #60c0bf 0%, #60c0bf);
+
+}
+.flex-container > div:nth-child(3){
+    background-image: linear-gradient(to right bottom, #8b4b7f, #8b4b7f 20%, #935586 20%, #935586 80%, #8b4b7f 0%, #8b4b7f);
+
+}
+.flex-container > div:nth-child(4){
+    background:linear-gradient(to right bottom,var(--dark-yellow),var(--dark-yellow)30%, var(--yellow) 30%, var(--yellow)70%, var(--dark-yellow)0%,var(--dark-yellow));
+
+}
+.flex-container > div:nth-child(5){
+    background:linear-gradient(to right bottom,var(--dark-red),var(--dark-red)27%, var(--red) 20%, var(--red)70%, var(--dark-red)0%,var(--dark-red));
+
+}
+@media(max-width:1024px){
+    .flex-container{
+        flex-direction: column;
+    }
+    .flex-container > div{
+        width: 100%;
+    }
+}
